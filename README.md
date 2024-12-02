@@ -1,70 +1,102 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proyecto: **Card Pokémon**
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+**Card Pokémon** es una aplicación interactiva que permite a los usuarios ver una lista de Pokémon, filtrarlos por tipo o habilidad, y visualizar información detallada sobre cada uno. La aplicación consume datos de la API pública de Pokémon (PokéAPI) para mostrar información precisa y actualizada sobre los Pokémon, incluyendo sus tipos, habilidades y otros detalles importantes.
 
-### `npm start`
+Puedes acceder a la versión en producción del proyecto en el siguiente enlace:  
+[https://card-pokemon.netlify.app/](https://card-pokemon.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Características
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Filtro de Pokémon**: Los usuarios pueden filtrar la lista de Pokémon por tipo o habilidad.
+- **Información detallada**: Al seleccionar un Pokémon, se muestra información relevante como el tipo, habilidades y estadísticas.
+- **Diseño Responsivo**: El diseño es completamente responsivo, adaptándose a diferentes tamaños de pantalla (móviles, tabletas, computadoras de escritorio).
+- **Interfaz limpia y moderna**: El uso de **Tailwind CSS** garantiza un diseño atractivo y fácil de usar.
+- **Consumo de API**: La aplicación obtiene los datos de la API de Pokémon (PokéAPI) en tiempo real, garantizando información actualizada.
 
-### `npm test`
+## Tecnologías utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: Librería de JavaScript para construir interfaces de usuario interactivas.
+- **Axios**: Biblioteca para realizar solicitudes HTTP a la API de Pokémon.
+- **Tailwind CSS**: Framework de CSS que facilita la creación de diseños responsivos y estilizados.
+- **React Context**: Utilizado para manejar el estado global de la aplicación, permitiendo una gestión eficiente de los datos de los Pokémon.
 
-### `npm run build`
+## Funcionalidad
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Página principal**: En la página principal, los usuarios pueden ver una lista de Pokémon. La aplicación realiza una petición a la API para obtener la lista de Pokémon disponibles.
+2. **Filtrado**: Los usuarios pueden seleccionar un tipo o habilidad para filtrar los Pokémon mostrados. Los tipos y habilidades están disponibles en un menú desplegable.
+3. **Visualización de Pokémon**: Cada Pokémon es mostrado en una tarjeta que incluye información clave como su nombre, imagen, tipo y habilidades.
+4. **Cargando y error**: Si ocurre algún error al cargar los datos o si la aplicación está esperando la respuesta de la API, se muestra un mensaje apropiado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Cómo usar el proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clonar el repositorio**:
 
-### `npm run eject`
+   Si deseas ejecutar este proyecto localmente, primero clona el repositorio:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/tuusuario/card-pokemon.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Instalar dependencias**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Navega a la carpeta del proyecto y ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   cd card-pokemon
+   npm install
+   ```
 
-## Learn More
+3. **Ejecutar el proyecto**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Para iniciar el servidor de desarrollo, utiliza el siguiente comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+   Esto iniciará la aplicación en `http://localhost:3000` en tu navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Estructura del proyecto
 
-### Analyzing the Bundle Size
+El proyecto está estructurado de la siguiente manera:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+card-pokemon/
+│
+├── public/                # Archivos públicos, como el HTML principal
+│   ├── index.html         # HTML principal
+│
+├── src/                   # Archivos fuente
+│   ├── components/        # Componentes React reutilizables
+│   │   ├── PokemonCard.js # Componente que muestra la información de cada Pokémon
+│   │   └── PokemonList.js # Componente que muestra la lista de Pokémon
+│   ├── context/           # Manejo de estado global con Context API
+│   ├── App.js             # Componente principal
+│   ├── index.js           # Entrada del proyecto
+│   └── styles/            # Estilos globales (Tailwind CSS)
+│
+├── package.json           # Dependencias y scripts del proyecto
+└── tailwind.config.js     # Configuración de Tailwind CSS
+```
 
-### Making a Progressive Web App
+## Contribuciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+¡Las contribuciones son bienvenidas! Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
-### Advanced Configuration
+1. Haz un **fork** del repositorio.
+2. Crea una **nueva rama** para trabajar en tu característica o corrección de errores.
+3. Realiza tus cambios y **realiza un commit** con un mensaje claro y descriptivo.
+4. Abre un **pull request** describiendo los cambios realizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Créditos
 
-### Deployment
+- [PokéAPI](https://pokeapi.co/) para los datos de los Pokémon.
+- [React](https://reactjs.org/) para la construcción de la interfaz de usuario.
+- [Tailwind CSS](https://tailwindcss.com/) para los estilos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licencia
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está bajo la Licencia MIT.
